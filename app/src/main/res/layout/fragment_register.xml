@@ -18,6 +18,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/edtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/textfield_name"
@@ -26,14 +27,16 @@
             android:textSize="@dimen/h2" />
 
         <EditText
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/textfield_user"
             android:hint="@string/user"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textSize="@dimen/h2" />
 
         <EditText
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/textfield_password"
