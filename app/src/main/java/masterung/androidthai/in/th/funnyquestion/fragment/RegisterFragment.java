@@ -1,6 +1,7 @@
 package masterung.androidthai.in.th.funnyquestion.fragment;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -26,6 +27,7 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 
 import masterung.androidthai.in.th.funnyquestion.MainActivity;
 import masterung.androidthai.in.th.funnyquestion.R;
+import masterung.androidthai.in.th.funnyquestion.ServiceActivity;
 import masterung.androidthai.in.th.funnyquestion.utility.MyAlertDialog;
 
 public class RegisterFragment extends Fragment {
@@ -104,6 +106,10 @@ public class RegisterFragment extends Fragment {
                                     Toast.makeText(getActivity(), "Success Register " + firebaseUser.getDisplayName(),
                                             Toast.LENGTH_SHORT).show();
                                     progressDialog.dismiss();
+
+                                    startActivity(new Intent(getActivity(), ServiceActivity.class));
+                                    getActivity().finish();
+
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
